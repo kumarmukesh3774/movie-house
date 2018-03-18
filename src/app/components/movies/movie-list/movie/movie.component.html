@@ -1,0 +1,13 @@
+
+
+  <img class="card-img-top" src={{movie.poster}} alt="Card image cap">
+      <div class="card-body"> 
+       <h5 class="card-title">{{movie.title}}</h5>
+        <p class="card-text"><small class="text-muted">Published at {{movie.Year}}</small></p>
+        <div class="card-footer">
+            <small class="text-muted">
+                <div *ngIf="normalFlag; else elseBlock"><button     type="button" class="btn btn-outline-warning"    (click)="addToFav(singleNews)"  ><i><b><span style="font-style: normal;">Add to Favourites</span></b></i></button></div>
+                <ng-template #elseBlock> <button   type="button" class="btn btn-outline-warning"    (click)="deleteFavNews(singleNews)" ><i><b><span style="font-style: normal;">Remove from Favourites</span></b></i></button></ng-template>
+            </small>
+          </div>
+      </div>
